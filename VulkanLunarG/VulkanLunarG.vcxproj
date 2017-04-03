@@ -147,11 +147,13 @@
   <ItemGroup>
     <ClCompile Include="..\source\main.cpp" />
     <ClCompile Include="..\source\waifu\wfassert.cpp" />
+    <ClCompile Include="..\source\waifu\wfmath.cpp" />
     <ClCompile Include="..\source\waifu\wfos.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\waifu\wfassert.h" />
     <ClInclude Include="..\source\waifu\wfmacro.h" />
+    <ClInclude Include="..\source\waifu\wfmath.h" />
     <ClInclude Include="..\source\waifu\wfos.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

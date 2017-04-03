@@ -27,6 +27,9 @@
     <ClCompile Include="..\source\waifu\wfassert.cpp">
       <Filter>Source Files\Waifu</Filter>
     </ClCompile>
+    <ClCompile Include="..\source\waifu\wfmath.cpp">
+      <Filter>Source Files\Waifu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\waifu\wfmacro.h">
@@ -36,6 +39,9 @@
       <Filter>Source Files\Waifu</Filter>
     </ClInclude>
     <ClInclude Include="..\source\waifu\wfassert.h">
+      <Filter>Source Files\Waifu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\waifu\wfmath.h">
       <Filter>Source Files\Waifu</Filter>
     </ClInclude>
   </ItemGroup>
