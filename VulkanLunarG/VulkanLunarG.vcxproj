@@ -155,6 +155,7 @@
     <ClInclude Include="..\source\waifu\wfmacro.h" />
     <ClInclude Include="..\source\waifu\wfmath.h" />
     <ClInclude Include="..\source\waifu\wfos.h" />
+    <ClInclude Include="..\source\waifu\wftemplate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
