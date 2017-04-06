@@ -54,4 +54,7 @@ namespace wfOS
 
 	float GetOSTimeInSec();
 	long GetOSTimeInMSec();
+
+	uint64 GetOSPerfCount();
+	int64 GetOSPerfFreq();
 }

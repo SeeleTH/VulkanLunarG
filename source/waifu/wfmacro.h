@@ -36,3 +36,5 @@
 
 typedef unsigned __int32 uint32;
 typedef __int32 int32;
+typedef unsigned long long uint64;
+typedef long long int64;

@@ -132,4 +132,18 @@ namespace wfOS
 		long time_ms = (time.wSecond * 1000) + time.wMilliseconds;
 		return time_ms;
 	}
+
+	uint64 GetOSPerfCount()
+	{
+		uint64 realtime;
+		QueryPerformanceCounter((LARGE_INTEGER*)&realtime);
+		return realtime;
+	}
+
+	int64 GetOSPerfFreq()
+	{
+		int64 countsPerSec;
+		QueryPerformanceFrequency((LARGE_INTEGER*)&countsPerSec);
+		return countsPerSec;
+	}
 }

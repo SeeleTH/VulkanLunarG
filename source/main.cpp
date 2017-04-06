@@ -3,12 +3,17 @@
 #include <stdlib.h>
 #endif
 
+#include <string>
+
 #include <Windows.h>
 #include <vulkan\vulkan.h>
 
 #include "waifu\wfmacro.h"
 #include "waifu\wfassert.h"
 #include "waifu\wfos.h"
+#include "waifu\wftime.h"
+
+#include "vulkanApp.h"
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -60,14 +65,13 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	windowContext.Handle = windowHandle;
 	windowContext.Instance = hInstance;
 
-	// Initialize Begin
-	uint32_t extensionCount = 0;
-	vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
+	Application* app = new VulkanApp(windowContext);
 
-	std::cout << extensionCount << " extensions supported" << std::endl;
+	// Initialize Begin
+	WFASSERT(app->OnInitialize());
 
 	// Initialize End
-
+	wfTime::FrameTimer timer;
 	MSG msg;
 	bool done = false;
 	while (!done) {
@@ -79,8 +83,18 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 		}
+		
+		timer.Update();
+		if(!app->OnUpdate(timer.GetDeltaFloat()))
+		{
+			break;
+		}
 		RedrawWindow(windowHandle, NULL, NULL, RDW_INTERNALPAINT);
 	}
+
+	WFASSERT(app->OnDestroy());
+	delete app;
+	app = nullptr;
 
 	return (int)msg.wParam;
 }

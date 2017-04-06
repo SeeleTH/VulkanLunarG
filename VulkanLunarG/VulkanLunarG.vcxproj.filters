@@ -26,6 +26,12 @@
     <ClCompile Include="..\source\waifu\wfmath.cpp">
       <Filter>Source Files\Waifu</Filter>
     </ClCompile>
+    <ClCompile Include="..\source\waifu\wftime.cpp">
+      <Filter>Source Files\Waifu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\vulkanApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\waifu\wfmacro.h">
@@ -42,6 +48,15 @@
     </ClInclude>
     <ClInclude Include="..\source\waifu\wftemplate.h">
       <Filter>Source Files\Waifu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\waifu\wftime.h">
+      <Filter>Source Files\Waifu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\application.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\vulkanApp.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
