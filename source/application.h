@@ -11,7 +11,7 @@ public:
 
 	virtual ~Application(){}
 
-	virtual bool OnInitialize(){ return true; }
+	virtual bool OnInit(){ return true; }
 	virtual bool OnUpdate(const float elapsetime = 0.f){ return true; }
 	virtual bool OnDestroy(){ return true; }
 private:

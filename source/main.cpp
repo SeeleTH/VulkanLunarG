@@ -68,7 +68,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	Application* app = new VulkanApp(windowContext);
 
 	// Initialize Begin
-	WFASSERT(app->OnInitialize());
+	WFASSERT(app->OnInit());
 
 	// Initialize End
 	wfTime::FrameTimer timer;
